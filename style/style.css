@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+}
+
+/*** BOOT CSS ***/
+.logo {
+    float: left;
+}
+
+.center {
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.w33 {
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.w50 {
+    padding: 0 10px;
+    width: 50%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/*****CATEGORIAS******/
+.produtos img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+}
+
+.produtos{
+    max-height: auto;
+    margin: 100px 0px 100px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.produtos div{
+    height: 350px;
+    padding-top: 20px;
+}
+
+.corProduto{
+    background-color:rgba(235, 94, 94, 0.719);
+}
+.produtos .aumenta:hover{
+    transform: scale(1.1);
+}
+
+/*****Login******/
+#login{
+    background-color: rgb(101, 125, 170);
+    width: 120px;
+    height: 70px;
+    top: 55px;
+    position: fixed;
+    visibility: hidden;
+    text-align: center;
+    opacity: 0;
+    border-radius: 20px;   
+    transition: ease-out .5s;
+    border: solid black 2px;
+}
+
+#login a{
+    color: white;
+}
+
+#login a:hover{
+    text-decoration: underline lawngreen;
+}
+
+#bt_close{
+    color: aliceblue;
+    float: right;
+    padding-right: 12px;    
+    font-weight: bold;
+    cursor: pointer;
+    width: 2px;
+    border-radius: 10px;
+}
+
+#bt_close:hover{
+    background-color: red;
+}
+
+
+/*****ESTILIZAÇÃO******/
+body{
+    background-color: #f8a696;
+}
+
+#anuncios{
+    font-size: 40px;
+    background-color: rgba(235, 94, 94, 0.719);
+    padding: 10px;
+    border-top: black 1px solid; 
+    border-bottom: black 1px solid;
+    padding-left: 130px;
+}
+
+nav input {
+    padding-left: 10px;
+    height: 50px;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size: 20px; 
+    margin-left: 00px;
+}
+
+header {
+    padding: 20px 0;
+    background: #f8a696;
+    height: 220px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+nav img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+nav.desktop li {
+    font-size: 25px;
+    padding: 40px 70px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.box-especialidade {
+    margin: 20px 0;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.box-especialidade h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    background: #e99c8d;
+    padding: 30px 0;
+}
+
+footer p {
+    color: #838383;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/************Formatação do menu************/
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/*Links não visitados*/
+a:link {
+    color: #838383;
+}
+
+/*Links vistados*/
+a:visited {
+    color: #838383;
+}
+
+/*Links hover*/
+a img:hover {
+    color: white;
+    background: #6ad8e9;
+    border-radius: 10px;
+}
+
+/*Links active*/
+a:active {
+    color: #535353;
+}
+
+/***SLIDESHOW*********/
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.slideshow-container img{
+    height: 600px;
+    width: 1200px;
+    border-radius: 110px;
+    border: black solid 3px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+

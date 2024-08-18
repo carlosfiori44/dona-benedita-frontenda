@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dona Benedita</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=decide-width, inital-sale=1.0">
+    <meta name="keywords" content="palavras-chaves,do,meu,site">
+    <meta name="description" content="Descrição do meu website">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <div class="logo"> <img src="imagem/logo.png" height="170px"> </div>
+
+            <nav class="desktop right">
+                <ul>
+                    <li>
+                        <input type="text" name="pesquisa" id="busca" placeholder="Procure o produto que deseja...">
+                        <img src="https://img.icons8.com/android/68/000000/search.png" height="25px">
+                    </li>
+                    <a href="https://www.instagram.com/?hl=pt-br"></a>
+                    <li>
+                        <img src="https://img.icons8.com/fluent-systems-regular/68/000000/user-male-circle.png"
+                            height="40px" onclick="abrir()" />
+                        <div id="login">
+                            <nav id="bt_close" onclick="fechar()">x</nav>
+                            <a href="paginas/login.html">Login</a>
+                            <a href="paginas/registrar.html">Registre-se</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://img.icons8.com/fluent-systems-regular/48/000000/buy.png" height="40px" />
+                    </li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <div id="anuncios">
+        <table width="100%">
+            <tr>
+                <td>Até 50% de Desconto</td>
+                <td>Entregas Gratuita</td>
+                <td>Brindes</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="imagem/4.png">
+        </div>
+        <div class="mySlides fade">
+            <img src="imagem/3.png">
+        </div>
+        <div class="mySlides fade">
+            <img src="imagem/2.png">
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <section class="produtos">
+        <div id="lista-produtos">
+        </div>
+    </section>
+
+    <div class="clear" style="margin-bottom: 100px;"></div>
+    <hr>
+    <footer>
+        <div class="center">
+            <hr>
+            <div class="w33 left box-especialidade">
+                <a href="https://www.facebook.com/">
+                    <img src="https://img.icons8.com/android/96/000000/facebook-new.png" width=30 height=30 />
+                </a>
+                <h3>Facebook</h3>
+                <p>Dona Benedita Tecidos e Máscaras</p>
+            </div>
+            <div class="w33 left box-especialidade">
+                <a href="https://www.instagram.com/?hl=pt-br">
+                    <img src="https://img.icons8.com/fluent/96/000000/instagram-new.png" width=30 height=30 />
+                </a>
+                <h3>Instagram</h3>
+                <p>@_donabenedita</p>
+            </div>
+            <div class="w33 left box-especialidade">
+                <img src="https://img.icons8.com/pastel-glyph/64/000000/whatsapp--v2.png" width=30 height=30 />
+                <h3>Whatsapp</h3>
+                <p>(19)99689-0196 </p>
+            </div>
+            <div class="clear"></div>
+            <h3>
+                <p>Todos os direitos reservados ©tecHelp.company.br</p>
+            </h3>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script>
+        //Script para fazer as imagens trocarem no inicio
+        var slideIndex = 0;
+        showSlides();
+
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+
+        //Script para mostrar os produtos
+        const produtos = {
+            1: {
+                "Nome": "Máscara preta de caveira",
+                "imagem": "mascaras/mascara1.jpg",
+                "preço": "R$7,90",
+            },
+            2: {
+                "Nome": "Máscara preta de flores",
+                "imagem": "mascaras/mascara2.jpg",
+                "preço": "R$7,90",
+            },
+            3: {
+                "Nome": "Máscara preta de universo",
+                "imagem": "mascaras/mascara3.jpg",
+                "descricao": "é uma mascara",
+                "preço": "R$7,90",
+            },
+            4: {
+                "Nome": "Máscara mandala",
+                "imagem": "mascaras/mascara4.jpg",
+                "preço": "R$7,90",
+            },
+            5: {
+                "Nome": "Máscara floral",
+                "imagem": "mascaras/mascara5.jpg",
+                "preço": "R$7,90",
+            },
+            6: {
+                "Nome": "Máscara caveira e borboletas",
+                "imagem": "mascaras/mascara6.jpg",
+                "preço": "R$7,90",
+            },
+            7: {
+                "Nome": "Máscara unicornio",
+                "imagem": "mascaras/mascara7.jpg",
+                "preço": "R$7,90",
+            },
+            8: {
+                "Nome": "Tecido tricoline vermelho",
+                "imagem": "tecidos/tecido1.jpg",
+                "preço": "R$5,00 p/metro",
+            },
+            9: {
+                "Nome": "Tecido mandala colorido",
+                "imagem": "tecidos/tecido2.webp",
+                "preço": "R$7,00 p/metro",
+            },
+            10: {
+                "Nome": "Tecido xadrez",
+                "imagem": "tecidos/tecido3.jpg",
+                "preço": "R$12,00 p/metro",
+            },
+            11: {
+                "Nome": "Tecido de algodão azul claro",
+                "imagem": "tecidos/tecido4.jpg",
+                "preço": "R$7,00 p/metro",
+            },
+            12: {
+                "Nome": "Tecido de algodão floral",
+                "imagem": "tecidos/tecido5.jpg",
+                "preço": "R$16,00 p/metro",
+            },
+            13: {
+                "Nome": "Tecido tricoline preto",
+                "imagem": "tecidos/tecido6.jpg",
+                "preço": "R$4,99 p/metro",
+            },
+            14: {
+                "Nome": "Tecido floral azul",
+                "imagem": "tecidos/tecido7.png",
+                "preço": "R$10,00 p/metro",
+            },
+            15: {
+                "Nome": "Tecido patchwork floral",
+                "imagem": "tecidos/tecido8.jpg",
+                "preço": "R$7,00 p/metro",
+
+            }
+        }
+
+        const listaMae = document.getElementById("lista-produtos");
+
+        for (let propriedade in produtos) {
+            const meuProduto = document.createElement("div");
+            listaMae.appendChild(meuProduto);
+            meuProduto.setAttribute("class", "w33 left corProduto aumenta")
+
+            const imagemProduto = document.createElement("img");
+            meuProduto.appendChild(imagemProduto);
+            imagemProduto.setAttribute("src", produtos[propriedade]["imagem"]);
+
+            const nomeProduto = document.createElement("h3");
+            meuProduto.appendChild(nomeProduto);
+            nomeProduto.textContent = produtos[propriedade]["Nome"];
+
+            const precoProduto = document.createElement("p");
+            meuProduto.appendChild(precoProduto);
+            precoProduto.textContent = produtos[propriedade]["preço"];
+
+
+        }
+        //Para aparecer a opção de login ou registrar
+        function abrir() {
+            var login = document.getElementById("login").style.visibility = "visible";
+            var login = document.getElementById("login").style.opacity = "1";
+        }
+
+
+        function fechar() {
+            document.getElementById("login").style.visibility = "hidden";
+            var login = document.getElementById("login").style.opacity = "0";
+        }
+    </script>
+</body>
+
+</html>
